@@ -2,29 +2,91 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .name:focus {
+            color: white;
+            background-color: rgb(66, 66, 66);
+        }
+        
+        .email:focus {
+            color: white;
+            background-color: rgb(66, 66, 66);            
+        }
+
+        textarea {
+            border-top: 3px solid black;
+            border-right: 3px solid black;
+            border-left: 3px solid black;
+            border-bottom: 3px solid black;
+            border-radius: 10px;
+        }
+
+        .email{
+            margin-left: 20px;
+            margin-top: 10px;
+            line-height: 20px;
+            
+        }
+
+        .name{
+            margin-left: 36px;
+            line-height: 20px;
+        }
+
+        h1 {
+            display: inline-block;
+            color: rgb(66, 66, 66);
+            font-family: 'Dosis', sans-serif;
+            background-color: lightgrey;
+            border-radius: 10px;
+        }
+
+        h2 {
+            display: inline-block;
+            color: rgb(66, 66, 66);
+            background-color: lightgrey;
+            border-radius: 10px;
+        }
+
+        input[type="button"] {
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>설문조사</h1>
-    이름<input type="text">
-    <br>  
-    이메일<input type="text" placeholder="ex) whgusdlr13@naver.com">
-    <br>
-    <h2>나이</h2>
-    <input type="radio" name="age" value="10" checked>10대
-    <input type="radio" name="age" value="20">20대
-    <input type="radio" name="age" value="30">30대
-    <input type="radio" name="age" value="40">40대
-    <input type="radio" name="age" value="50">50대
-    <input type="radio" name="age" value="60">60대 이상
-    <br>
-    <h2>원하는 강의(복수응답가능합니다.)</h2>
-    <input type="checkbox" name="class" value="html" checked>html
-    <input type="checkbox" name="class" value="javascript">javascript
-    <input type="checkbox" name="class" value="css">css
-    <br>
-    <br>
-    <textarea cols="100" rows="15" placeholder="하고 싶은 말을 써주세요!"></textarea>
-    <input type="button" name="submit" value="제출">
-    
+    <div class="q">
+        <h1>설문조사</h1><br>
+        이름<input type="text" class="name" placeholder="ex) 조현익">
+        <br>  
+        이메일<input type="text" class="email" placeholder="ex) whgusdlr13@naver.com">
+        <br>
+    </div>
+    <div class="a">
+        <h2>나이</h2><br>
+        <input type="radio" name="age" value="10" checked>10대
+        <input type="radio" name="age" value="20">20대
+        <input type="radio" name="age" value="30">30대
+        <input type="radio" name="age" value="40">40대
+        <input type="radio" name="age" value="50">50대
+        <input type="radio" name="age" value="60">60대 이상
+    </div>
+    <div class="c">
+        <h2>원하는 강의(복수응답가능합니다.)</h2><br>
+        <input type="checkbox" name="html" value="html" checked>html
+        <input type="checkbox" name="javascript" value="javascript">javascript
+        <input type="checkbox" name="css" value="css">css
+        <br>
+        <br>
+        <textarea cols="100" rows="15" placeholder="하고 싶은 말을 써주세요!"></textarea>
+        <input type="button" name="submit" value="제출">
+    </div>
 </body>
 </html>

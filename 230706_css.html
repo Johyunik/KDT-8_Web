@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'KyoboHandwriting2022khn';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+        }
+
+        div p {
+            font-weight: 900;
+            line-height: 200px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .google {
+            color: rgb(37, 226, 157);  
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .noon {
+            font-family: 'KyoboHandwriting2022khn';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        
+
+        h1 {
+            width: 100px;
+            background-color: yellow;
+        }
+
+        span {
+            display: inline-block;
+            background-color: lightblue;
+            width: 500px;
+            margin-right : 30px;
+        }
+        
+        button {
+            margin-top: 30px;
+            border: none solid transparent;
+            width: 200px;
+            height: 200px;
+        }
+
+        button:hover {
+            border: 2px solid orange;
+        }
+        .dnone {
+            display:none;
+            background-color: red;
+        }
+
+        .invisible {
+            /* visibility: hidden */
+            background-color: orangered;
+        }
+
+        .opacity-0 {
+            /* opacity: 0; */
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>p 태그입니다.</p>
+    </div>
+    <p class="google">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem sequi quasi perferendis facere in dolore aperiam recusandae illum et harum ipsam sunt consequatur aut unde optio aliquid doloremque, atque voluptatibus!</p>
+    <p class="noon">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis culpa debitis praesentium facere. Sed tempora quis, quasi iusto ullam voluptas? Architecto molestiae commodi voluptatem ipsa beatae optio fuga rerum ut.</p>
+    <a href="https://www.naver.com">네이버</a>
+
+    <div style="width:calc(100vw - 200px); height: 100vw;
+                 background-color: red;"></div>
+
+    <button>버튼</button>
+
+    <div style="border-top: 2px dashed red; border-bottom: 2px dashed blue;
+                border-width: 10px 5px 5px;">kdt</div>
+
+    <div class="square">original</div>
+    <div class="square d-none">d-none</div>
+    <div class="square invisible">invisible</div>
+    <div class="square opacity-0">opacity-0</div>
+    <div class="square">original</div>
+</body>
+</html>
