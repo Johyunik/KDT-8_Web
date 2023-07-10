@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: brown;
+            width: 500px;
+            height: 500px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item1 {
+            position: absolute;
+            left: 50px;
+            top: 30px;
+            z-index: 1;
+            background-color: aqua;
+        }
+
+        .item2 {
+            position: absolute;
+            left: 50px;
+            top: 90px;
+            
+            background-color: aquamarine;
+        }
+
+        .item3 {
+            position: fixed;
+            right: 100px;
+            top: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+</body>
+</html>
