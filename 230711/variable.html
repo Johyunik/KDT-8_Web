@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const msg = '안녕하세요';
+        const name = '님';
+
+        console.log(msg);
+        console.log(name);
+
+        console.log(msg, name);
+        console.log(msg + name);
+        console.log('이런')
+
+        console.log('------------------------------------');
+
+        let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+        /*
+        console.log("색상 : " + colors);
+        console.log("색상 : " , colors);
+        console.log(`색상 : ${colors}`);
+
+        
+        let list = [1, 2, 3, 4, 5, 6];
+        console.log(list[1]);
+        console.log(list.length);
+
+        list.push(7);
+        console.log(list);
+
+        list.pop()
+        console.log(list); 
+        */
+        
+        console.log(colors[2]);
+        colors.push("black");
+        console.log(colors);
+        console.log(colors.indexOf("black"));
+        console.log(colors.reverse());
+
+        console.log(typeof 3, "isn't", typeof "안뇽", "data type.\n"+ "Typeof를 boolean 이나 null에 사용하면, " + typeof true, "결과를 얻을 수 있습니다.")
+
+        //let mathScore = prompt("수학 점수");
+        //let engScore = prompt("영어 점수");
+
+        //let avg = (Number(mathScore) + Number(engScore)) / 2;
+
+        //console.log(avg);
+        
+        console.log("형변환");
+        let num = 456;
+        console.log(typeof num); // number
+        let num1 = String(num);
+        console.log(typeof num1);   // string
+        let num2 = num.toString();
+        console.log(typeof num2); // string
+
+        // String() toString() 의 차이?
+        // toString() = null 값이면 에러
+        
+        console.log(1 !== "1");
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
