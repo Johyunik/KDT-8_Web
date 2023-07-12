@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let sum = 0;
+      let sum2 = 0;
+      let sum3 = 0;
+      let number = [];
+
+      for (let i = 0; i < 100; i++) {
+        number[i] = i + 1;
+        sum += number[i];
+      }
+      console.log("for : ", sum);
+
+      for (let num of number) {
+        sum2 += num;
+      }
+
+      console.log("for-of : ", sum2);
+
+      number.forEach((num) => {
+        sum3 += num;
+      });
+
+      console.log("forEach : ", sum3);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let fruits = ["melon", "apple", "banana", "cherry", "grape"];
+      console.log("fruits : ", fruits);
+      console.log("apple : ", fruits[1]);
+
+      // 기본 for 문
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(" i : ", i);
+        console.log("fruits[i] : ", fruits[i]);
+      }
+
+      // for of
+      // for (변수 of 배열) : 배열에 있는 요소를 하나씩 변수로 가져온다.
+      for (let f of fruits) {
+        console.log("for-of : ", f);
+      }
+
+      // forEach ( 함수 )
+      // 배열.forEach((변수, 인덱스, 배열) => {})
+      // 변수 > 배열에 들어있는 요소가 하나씩 들어온다
+      // 인덱스 > 변수가 하나씩 들어올 대 그 변수의 인덱스
+      // 배열 > 현재 내가 들고 있는 배열
+      console.log("-------------------");
+
+      let n = [1, 2, 3];
+      let arr = ["red", "orange", "yellow"];
+
+      let function1 = (n, index, arr) => {
+        //console.log("f : ", f);
+        //console.log("index : ", index);
+        //console.log("arr : ", arr);
+        console.log(n);
+      };
+      let result = n.forEach(function1);
+      console.log(result);
+
+      console.log("-------------------------");
+
+      let function2 = (fruit, index, fruits) => {
+        console.log("function2가 실행되었다.");
+      };
+      let result2 = fruits.forEach(function2);
+      console.log(result2);
+    </script>
+  </head>
+  <body></body>
+</html>
