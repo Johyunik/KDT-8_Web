@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h5>방명록 입니다.</h5>
+    <div>작성자 : <input type="text" id="name" /></div>
+    <div>내용 : <input type="text" id="write" /></div>
+    <div><button onclick="wr();">작성</button></div>
+    <table id="ta">
+      <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </tr>
+    </table>
+
+    <script>
+      let i = 1;
+      function wr() {
+        let ta = document.getElementById("ta");
+        let name = document.getElementById("name");
+        let cont = document.getElementById("write");
+
+        let value = name.value;
+        let value2 = cont.value;
+
+        let tr = document.createElement("tr");
+        ta.appendChild(tr);
+
+        let td1 = document.createElement("td");
+        tr.appendChild(td1);
+        td1.innerText = i++;
+
+        let td2 = document.createElement("td");
+        tr.appendChild(td2);
+        td2.innerText = value;
+
+        let td3 = document.createElement("td");
+        tr.appendChild(td3);
+        td3.innerText = value2;
+
+        let now = new Date();
+        let td4 = document.createElement("td");
+        tr.appendChild(td4);
+
+        let year = now.getFullYear();
+        let month = now.getMonth();
+        let day = now.getDay();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+
+        td4.innerText =
+          year + "-" + month + "-" + day + " " + hour + " : " + minute;
+      }
+    </script>
+  </body>
+</html>
