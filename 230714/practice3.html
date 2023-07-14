@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      table,
+      td,
+      th {
+        position: relative;
+        top: 10px;
+        left: 70px;
+        border: 0px solid black;
+        border-collapse: collapse;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>날짜 : <input type="text" id="date" /></div>
+    <div>내용 : <input type="text" id="content" /></div>
+    <button>작성</button>
+    <table>
+      <tr>
+        <th colspan="7">2022년 7월</th>
+      </tr>
+      <tr>
+        <td style="color: red">일</td>
+        <td>월</td>
+        <td>화</td>
+        <td>수</td>
+        <td>목</td>
+        <td>금</td>
+        <td style="color: blue">토</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td style="color: blue">2</td>
+      </tr>
+      <tr>
+        <td style="color: red">3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td style="color: blue">9</td>
+      </tr>
+      <tr>
+        <td style="color: red">10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td style="color: blue">16</td>
+      </tr>
+      <tr>
+        <td style="color: red">17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td style="color: blue">23</td>
+      </tr>
+      <tr>
+        <td style="color: red">24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td style="color: blue">30</td>
+      </tr>
+      <tr>
+        <td style="color: red">31</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="color: blue"></td>
+      </tr>
+    </table>
+    <script>
+      $(window).ready(function () {
+        console.log("로드 완료1");
+      });
+      $(function () {
+        console.log("로드 완료3");
+      });
+      $(document).ready(function () {
+        console.log("로드 완료2");
+      });
+
+      let target = null;
+
+      $("td").on("click", function () {
+        //console.log($(this).text());
+        //document.getElementById("day").value = $(this).text();
+
+        let date = $(this).text();
+        $("#date").val(date);
+        target = this;
+      });
+
+      $("button").on("click", function () {
+        let content = $("#content").val();
+        $(target).append("<string>" + content + "</strong");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .css1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .css2 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      .css3 {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+      }
+      .css4 {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      .css5 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+      .css6 {
+        width: 200px;
+        height: 200px;
+        background-color: navy;
+      }
+      .css7 {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+      }
+      .css8 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+    <script>
+      function switchClass() {
+        $("div").switchClass("css1", "css2");
+        $("div").attr("onclick", "switchClass2()");
+      }
+      function switchClass2() {
+        $("div").switchClass("css2", "css3");
+        $("div").attr("onclick", "switchClass3()");
+      }
+      function switchClass3() {
+        $("div").switchClass("css3", "css4");
+        $("div").attr("onclick", "switchClass4()");
+      }
+      function switchClass4() {
+        $("div").switchClass("css4", "css5");
+        $("div").attr("onclick", "switchClass5()");
+      }
+      function switchClass5() {
+        $("div").switchClass("css5", "css6");
+        $("div").attr("onclick", "switchClass6()");
+      }
+      function switchClass6() {
+        $("div").switchClass("css6", "css7");
+        $("div").attr("onclick", "switchClass7()");
+      }
+      function switchClass7() {
+        $("div").switchClass("css7", "css8");
+        $("div").attr("onclick", "switchClass8()");
+      }
+      function switchClass8() {
+        $("div").switchClass("css8", "css1");
+        $("div").attr("onclick", "switchClass()");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="css1" onclick="switchClass()"></div>
+  </body>
+</html>
