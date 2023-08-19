@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const lists = ["apple", "grape"];
+      // 기존방식
+      console.log(lists[0], lists[1]);
+
+      // 구조분해
+      [item1, item2] = lists;
+      console.log(item1, item2);
+
+      // 객체
+      const Person = {
+        // key : value
+        name: "Martin",
+        age: 19,
+        gender: "M",
+        friends: ["Alex", "Kevin"],
+        hello: function () {
+          console.log("hello");
+        },
+        "j-1": "America",
+      };
+      console.log(Person.name);
+      Person.name = "hyunik";
+      console.log(Person.name);
+      console.log(Person.friends);
+      console.log(Person["name"]);
+      console.log(Person["j-1"]);
+      Person.city = "Seoul";
+
+      // 객체 구조 분해
+      const { name, city, gender, key1 = "Hi" } = Person;
+      console.log(name, city, gender, key1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // spread 연산자
+      const a = [1, 2, 3];
+      const b = [4, 5];
+
+      const concat = a.concat(b);
+      console.log(concat);
+      const spread = [...b, ...a];
+      console.log(spread);
+      const person = {
+        name: "Martin",
+        age: 29,
+      };
+      console.log({ ...person });
+      const c = "hello";
+      console.log({ ...c });
+
+      function get(...rest) {
+        console.log(rest);
+      }
+      get(10, 20, 30, 40);
+
+      // class
+      class Cat {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        // method
+        mew() {
+          console.log("야옹");
+        }
+        eat() {
+          console.log("먹이를 먹습니다.");
+        }
+      }
+      const cat1 = new Cat("나비", 1);
+      console.log(cat1);
+      cat1.mew();
+      cat1.eat();
+    </script>
+  </body>
+</html>
